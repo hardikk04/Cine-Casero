@@ -55,3 +55,34 @@ html {
   right: 0%;
   transform: translateY(-50%);
 }
+
+.page2-top-img > img {
+  filter: grayscale(1);
+  transition: all ease 0.5s;
+}
+
+.page2-top-img > img:hover {
+  filter: grayscale(0);
+}
+
+.page2-bottom-img > img {
+  filter: grayscale(1);
+  transition: all ease 0.5s;
+}
+
+.page2-bottom-img > img:hover {
+  filter: grayscale(0);
+}
+
+.page2-img-text {
+  top: 70%;
+  /* left: 50%; */
+  transform: translate(0%, -50%);
+  /* white-space: nowrap; */
+}
+
+.page2 > h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
