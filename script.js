@@ -693,3 +693,29 @@ page2Img.forEach((img, index) => {
     });
   });
 });
+
+tl.to(".page3-y-top", {
+  top: "-56%",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page3",
+    start: "top 0",
+    end: "top -100%",
+    // markers: true,
+    scrub: 1,
+    pin: true,
+  },
+});
+
+tl.to(".page3-y-bottom", {
+  top: "35%",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page3",
+    start: "top 0",
+    end: "top -100%",
+    // markers: true,
+    scrub: 1,
+    // pin: true,
+  },
+});
