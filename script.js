@@ -719,3 +719,17 @@ tl.to(".page3-y-bottom", {
     // pin: true,
   },
 });
+
+tl.from(".page4-text", {
+  top: "100%",
+  opacity: 1,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page4",
+    scrub: 1,
+    pin: true,
+    markers: true,
+    start: "top 0",
+    end: "top -100%",
+  },
+});
