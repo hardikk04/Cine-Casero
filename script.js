@@ -728,7 +728,7 @@ tl.from(".page4-text", {
     trigger: ".page4",
     scrub: 1,
     pin: true,
-    markers: true,
+    // markers: true,
     start: "top 0",
     end: "top -100%",
   },

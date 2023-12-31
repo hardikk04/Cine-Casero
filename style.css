@@ -111,3 +111,14 @@ html {
   height: 30%;
   width: 100%;
 }
+
+.rotate-img {
+  position: relative;
+  animation: rotate 50s linear infinite both;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
