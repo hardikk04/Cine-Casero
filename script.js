@@ -591,6 +591,20 @@ function tiltJs() {
 
 tiltJs();
 
+function lenisJs() {
+  const lenis = new Lenis();
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 500);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+}
+
+lenisJs();
+
 const tl = gsap.timeline();
 function imgGalleryGsap() {
   tl.to(".page1-img-part3", {
@@ -854,14 +868,49 @@ function page6Part1Animation() {
 }
 page6Part1Animation();
 
-// gsap.to(".page6-part2-left-text", {
-//   top: "100%",
-//   scrollTrigger: {
-//     scroller: "body",
-//     trigger: ".page6-part2-left-text",
-//     start: "top 70%",
-//     end: "top -20%",
-//     markers: true,
-//     scrub: 1,
-//   },
-// });
+function loaderAnimation() {
+  const loader = document.querySelector(".loader");
+  const loaderCursor = document.querySelector(".loader-cursor");
+
+  loader.addEventListener("mousemove", (dets) => {
+    gsap.to(loaderCursor, {
+      left: dets.x,
+      top: dets.y,
+    });
+  });
+
+  let loaderSplittedText = "";
+
+  document
+    .querySelector(".loader>h1")
+    .textContent.split("")
+    .forEach((text) => {
+      loaderSplittedText += `<span>${text}</span>`;
+    });
+
+  document.querySelector(".loader>h1").innerHTML = loaderSplittedText;
+
+  loader.addEventListener("click", () => {
+    tl.to(".loader>h1>span", {
+      opacity: 0,
+      stagger: -0.1,
+    });
+    tl.to(".loader", {
+      top: "-100vh",
+      ease: "power3.inOut",
+      duration: 1,
+    });
+
+    tl.from(".page1 img", {
+      opacity: 0,
+      stagger: 0.1,
+    });
+
+    tl.from(".page1-text", {
+      height: 0,
+      opacity: 0,
+    });
+  });
+}
+
+loaderAnimation();

@@ -13,6 +13,16 @@
   </head>
   <body>
     <div class="main">
+      <div
+        class="loader fixed top-0 left-0 h-[100vh] w-full bg-[#1c1c1c] z-20 flex justify-center items-center"
+      >
+        <div
+          class="loader-cursor h-[10vh] w-[10vh] rounded-full bg-[#d8d7d3] flex items-center justify-center absolute"
+        >
+          <h1 class="text-[#1c1c1c] text-[.8vw]">ENTRAR</h1>
+        </div>
+        <h1 class="text-[5vw] text-[#d8d7d3] cursor-pointer">Cine Casero</h1>
+      </div>
       <div class="page1 bg-[#d8d7d3] min-h-[100vh] w-full pt-[2vw]">
         <nav class="flex justify-between px-[6vw] items-center">
           <svg
@@ -55,10 +65,10 @@
           class="page1-img-gallery w-full h-[100vh] overflow-x-hidden flex justify-between gap-4 items-center relative"
         >
           <div
-            class="page1-img-part1 h-[45%] w-[12%] rounded-r-[1vw] bg-red-50 shrink-0 overflow-hidden"
+            class="page1-img-part1 h-[45%] w-[12%] rounded-r-[1vw] shrink-0 overflow-hidden"
           >
             <img
-              class="h-full w-full object-cover"
+              class="h-full w-full object-cover rounded-[1vw]"
               src="https://www.cinecasero.uy/img/g-01.jpg"
               alt=""
             />
@@ -70,7 +80,7 @@
               class="part2-img1 w-full h-[55%] rounded-[1vw] overflow-hidden"
             >
               <img
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover rounded-[1vw]"
                 src="https://www.cinecasero.uy/img/g-02.jpg"
                 alt=""
               />
@@ -79,7 +89,7 @@
               class="part2-img2 w-full h-[45%] rounded-[1vw] overflow-hidden"
             >
               <img
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover rounded-[1vw]"
                 src="https://www.cinecasero.uy/img/g-03.jpg"
                 alt=""
               />
@@ -89,7 +99,7 @@
             class="page1-img-part3 h-[50%] w-[30%] shrink-0 absolute overflow-hidden rounded-[1vw]"
           >
             <img
-              class="h-full w-full object-cover"
+              class="h-full w-full object-cover rounded-[1vw]"
               src="https://www.cinecasero.uy/img/g-04.jpg"
               alt=""
             />
@@ -106,7 +116,7 @@
               class="part4-img1 w-full h-[35%] rounded-[1vw] overflow-hidden"
             >
               <img
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover rounded-[1vw]"
                 src="https://www.cinecasero.uy/img/g-05.jpg"
                 alt=""
               />
@@ -115,17 +125,17 @@
               class="part4-img2 w-full h-[65%] rounded-[1vw] overflow-hidden"
             >
               <img
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover rounded-[1vw]"
                 src="https://www.cinecasero.uy/img/g-06.jpg"
                 alt=""
               />
             </div>
           </div>
           <div
-            class="page1-img-part5 h-[45%] w-[12%] rounded-l-[1vw] bg-red-400 shrink-0 overflow-hidden"
+            class="page1-img-part5 h-[45%] w-[12%] rounded-l-[1vw] shrink-0 overflow-hidden"
           >
             <img
-              class="h-full w-full object-cover"
+              class="h-full w-full object-cover rounded-[1vw]"
               src="https://www.cinecasero.uy/img/g-07.jpg"
               alt=""
             />
@@ -591,6 +601,7 @@
         <h1 class="text-[#fff] opacity-60 text-[5vw]">Vimeor</h1>
       </div>
     </div>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
       integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
