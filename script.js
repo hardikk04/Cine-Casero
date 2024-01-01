@@ -694,31 +694,35 @@ page2Img.forEach((img, index) => {
   });
 });
 
-tl.to(".page3-y-top", {
-  top: "-56%",
-  scrollTrigger: {
-    scroller: "body",
-    trigger: ".page3",
-    start: "top 0",
-    end: "top -100%",
-    // markers: true,
-    scrub: 1,
-    pin: true,
-  },
-});
+function page3Animation() {
+  tl.to(".page3-y-top", {
+    top: "-55%",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page3",
+      start: "top 0",
+      end: "top -100%",
+      // markers: true,
+      scrub: 1,
+      pin: true,
+    },
+  });
 
-tl.to(".page3-y-bottom", {
-  top: "35%",
-  scrollTrigger: {
-    scroller: "body",
-    trigger: ".page3",
-    start: "top 0",
-    end: "top -100%",
-    // markers: true,
-    scrub: 1,
-    // pin: true,
-  },
-});
+  tl.to(".page3-y-bottom", {
+    top: "45%",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page3",
+      start: "top 0",
+      end: "top -100%",
+      // markers: true,
+      scrub: 1,
+      // pin: true,
+    },
+  });
+}
+
+page3Animation();
 
 tl.from(".page4-text", {
   top: "100%",
@@ -733,3 +737,119 @@ tl.from(".page4-text", {
     end: "top -100%",
   },
 });
+
+gsap.to(".rotate-img", {
+  rotate: 360,
+  duration: 40,
+  repeat: -1,
+});
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function () {
+  let currentScrollTop = window.scrollY;
+
+  if (currentScrollTop > lastScrollTop) {
+    gsap.to(".rotate-img", {
+      rotate: 360,
+      duration: 40,
+      repeat: -1,
+    });
+  } else {
+    gsap.to(".rotate-img", {
+      rotate: -360,
+      duration: 40,
+      repeat: -1,
+    });
+  }
+  lastScrollTop = currentScrollTop;
+});
+
+function page6Part1Animation() {
+  tl.from(".page6-part1-left-img1", {
+    y: 350,
+    scale: 0.9,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-part1-left-img1",
+      start: "top 100%",
+      end: "top 30%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  tl.from(".page6-part1-right-img1", {
+    y: 450,
+    scale: 0.9,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-part1-right-img1",
+      start: "top 100%",
+      end: "top 30%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  tl.from(".page6-part1-left-img2", {
+    y: 350,
+    scale: 0.9,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-part1-left-img2",
+      start: "top 100%",
+      end: "top 30%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  tl.from(".page6-part1-right-img2", {
+    y: 350,
+    scale: 0.9,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-part1-right-img2",
+      start: "top 100%",
+      end: "top 30%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  tl.from(".page6-part1-left-img3", {
+    y: 350,
+    scale: 0.9,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-part1-left-img3",
+      start: "top 100%",
+      end: "top 30%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+  
+  const page6Text = document.querySelector(".page6-part1-text");
+  let clutter = "";
+
+  page6Text.textContent.split("").forEach((text) => {
+    clutter += `<span>${text}</span>`;
+  });
+  page6Text.innerHTML = clutter;
+
+  gsap.to(".page6-part1-text>span", {
+    color: "#A39F9A",
+    stagger: 0.1,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-part1-text>span",
+      start: "top 60%",
+      end: "top -100%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+}
+page6Part1Animation();

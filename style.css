@@ -15,6 +15,11 @@ html {
   width: 100%;
 }
 
+@font-face {
+  font-family: website;
+  src: url(./zYX9KVElMYYaJe8bpLHnCwDKjXr8AI5sdO_q.woff2);
+}
+
 .page1-img-part1 {
   position: absolute;
   top: 50%;
@@ -114,11 +119,17 @@ html {
 
 .rotate-img {
   position: relative;
-  animation: rotate 50s linear infinite both;
+  /* animation: rotate 50s linear infinite both; */
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+.side-tap-left,
+.side-tap-right {
+  background-image: url("https://www.cinecasero.uy/img/tape.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.page6-part1-text {
+  font-family: website;
+  transform: translateX(15%);
 }
