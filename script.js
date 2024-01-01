@@ -830,7 +830,7 @@ function page6Part1Animation() {
       scrub: 1,
     },
   });
-  
+
   const page6Text = document.querySelector(".page6-part1-text");
   let clutter = "";
 
@@ -853,3 +853,15 @@ function page6Part1Animation() {
   });
 }
 page6Part1Animation();
+
+// gsap.to(".page6-part2-left-text", {
+//   top: "100%",
+//   scrollTrigger: {
+//     scroller: "body",
+//     trigger: ".page6-part2-left-text",
+//     start: "top 70%",
+//     end: "top -20%",
+//     markers: true,
+//     scrub: 1,
+//   },
+// });

@@ -15,11 +15,6 @@ html {
   width: 100%;
 }
 
-@font-face {
-  font-family: website;
-  src: url(./zYX9KVElMYYaJe8bpLHnCwDKjXr8AI5sdO_q.woff2);
-}
-
 .page1-img-part1 {
   position: absolute;
   top: 50%;
